@@ -1,9 +1,8 @@
 require('dotenv').config();
 const { PrismaClient } = require('@prisma/client');
 
-// Sem argumentos, ele lerá automaticamente do .env e do schema gerado
 const prisma = new PrismaClient({
-  datasourceUrl: process.env.DATABASE_URL // O Node passa a URL para o Prisma
+  datasourceUrl: process.env.DATABASE_URL
 });
 
 class OrderRepository {
