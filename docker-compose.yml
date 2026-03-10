@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres_order_api
+    restart: always
+    environment:
+      POSTGRES_USER: esdras
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: order_db
+    ports:
+      - "5432:5432"
