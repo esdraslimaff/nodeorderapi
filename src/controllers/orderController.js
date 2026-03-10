@@ -3,7 +3,6 @@ const orderService = require('../services/orderService');
 class OrderController {
     async create(req, res) {
         try {
-            // Chama o service que fará o Mapping e a gravação
             const order = await orderService.createOrder(req.body);
             return res.status(201).json(order);
         } catch (error) {
